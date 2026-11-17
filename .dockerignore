@@ -1,0 +1,7 @@
+.git
+.gitignore
+*.md
+servidor
+servidor.exe
+Dockerfile
+.dockerignore
