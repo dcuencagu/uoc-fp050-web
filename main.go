@@ -24,7 +24,7 @@ func inicio(w http.ResponseWriter, r *http.Request) {
 
 	datos := Pagina{
 		Titulo:  "Producto 2 - Alta Disponibilidad",
-		Mensaje: "Soy alumno de la UOC - V2",
+		Mensaje: "Soy alumno de la UOC - V3",
 		Pod:     hostname,
 		Imagen:  "/static/img/uoc.png",
 	}
