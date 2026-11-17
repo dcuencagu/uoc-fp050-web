@@ -10,15 +10,22 @@ import (
 type Pagina struct {
 	Titulo  string
 	Mensaje string
+	Pod     string
 	Imagen  string
 }
 
 var plantilla = template.Must(template.ParseFiles("templates/index.html"))
 
 func inicio(w http.ResponseWriter, r *http.Request) {
+	hostname, err := os.Hostname()
+	if err != nil {
+		hostname = "desconocido"
+	}
+
 	datos := Pagina{
-		Titulo:  "Producto 1 - Entorno de desarrollo",
+		Titulo:  "Producto 2 - Alta Disponibilidad",
 		Mensaje: "Soy alumno de la UOC",
+		Pod:     hostname,
 		Imagen:  "/static/img/uoc.png",
 	}
 	if err := plantilla.Execute(w, datos); err != nil {
